@@ -30,6 +30,18 @@ function removeParentListItem(){
   itemRemove = mom.firstChild.textContent;
   itemIndex = myList(itemRemove);
 }
+function saveList(){
+  var newList = myList.toString();
+
+  setCookie("listA", newList, 10 )
+}
+function clearList(){
+  var allNothing=document.getElementById("listDisplay");
+   allNothing.innerHTML= "";
+  myList = [];
+}
+
+
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
